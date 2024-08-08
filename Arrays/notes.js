@@ -1,5 +1,3 @@
-console.log('\r\n')
-
 const notes = [{
     title: 'My next trip',
     body: 'I would like to go to Spain'
@@ -11,32 +9,18 @@ const notes = [{
     body: 'Get a new seat'
 }]
 
+const findNote = function (notes, noteTitle) {
+    return notes.find(function (note, index) {
+        return note.title.toLowerCase() === noteTitle.toLowerCase()
+    })
+}
 
-// console.log(notes.pop())
-// notes.push('My new note')
+// const findNote = function (notes, noteTitle) {
+//     const index = notes.findIndex(function (note, index) {
+//         return note.title.toLowerCase() === noteTitle.toLowerCase()
+//     })
+//     return notes[index]
+// }
 
-// console.log(notes.shift())
-// notes.unshift('My first note')
-
-// notes.splice(1, 1, 'This is the new second item')
-
-// notes[2] = 'This is now the new note 3'
-
-//-----------------------------
-console.log('\r\n') // black space
-//-----------------------------
-// notes.forEach(function (item, index) {
-//     console.log(index)
-//     console.log(item)
-// })
-
-
-console.log(notes.length)
-console.log(notes)
-
-
-console.log('\r\n Searching Arrays Part I')
-const index = notes.findIndex(function (note, index) {
-    return note.title === 'Habbits to work on'
-})
-console.log(index)
+const note = findNote(notes, 'some other office modification')
+console.log(note)
