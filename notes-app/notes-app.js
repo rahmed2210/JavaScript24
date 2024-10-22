@@ -13,3 +13,5 @@ ps.forEach(function (p) {
 //    console.log(p.textContent)
 //    p.remove()
 })
+
+// Adding Element via the DOM
